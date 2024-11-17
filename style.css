@@ -1,0 +1,138 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Navigation Styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  padding: 12px;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+nav img {
+  width: 10%;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+ul li {
+  margin-inline: 15px;
+}
+ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+ul button {
+  background-color: rgb(73,226,73);
+  color: white;
+  font-size: 14px;
+  border-radius: 11px;
+  border: none;
+  padding: 5px 10px;
+}
+
+/* Music Cards */
+.container {
+  padding-top: 80px; /* To avoid overlap with navbar */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  margin: 10px;
+  width: 180px;  /* Adjusted width for compact size */
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 8px;
+  border-radius: 6px;
+  margin: 5px;
+  transition: all 0.3s;
+  width: 100%;
+}
+.items:hover {
+  background-color: rgb(112, 112, 112);
+  cursor: pointer;
+}
+.items img {
+  width: 60px;  /* Smaller image */
+  height: 60px;  /* Keep the aspect ratio consistent */
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+.items p {
+  font-size: 14px;  /* Smaller text */
+  margin-bottom: 6px;
+}
+.items i {
+  font-size: 18px;  /* Smaller icon */
+}
+
+/* SeekBar and Play Controls */
+.seekBar {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+.seekBar input {
+  width: 80%;
+  margin-top: 10px;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.content p {
+  font-size: 14px;  /* Smaller text */
+  margin-inline: 20px;
+}
+.content i {
+  font-size: 28px;  /* Smaller play button */
+  cursor: pointer;
+}
+.content img {
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  transition: 1s ease;
+}
+
+/* Music Visualizer */
+canvas#visualizer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
