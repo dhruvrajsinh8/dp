@@ -1,138 +1,102 @@
-/* General Styling */
-* {
-  margin: 0;
-  padding: 0;
+*{
+  margin:0%;
+  padding:0%;
 }
-body {
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
-  background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
-  height: 100vh;
-  overflow: hidden;
+body{
+  background-color: rgb(60,68,68);
+  font-family: 'Roboto',sans-serif;
 }
-
-@keyframes gradientAnimation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Navigation Styling */
-nav {
+nav{
   display: flex;
   justify-content: space-between;
   background-color: black;
-  padding: 12px;
-  color: white;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
+  color:white;
+  padding: 18px;
 }
-nav img {
-  width: 10%;
+nav img{
+  width:14%;
+  margin-left:22px;
 }
-nav ul {
+nav ul{
   display: flex;
   list-style: none;
+  margin-right:33px;
+  margin-top:5px;
 }
-ul li {
-  margin-inline: 15px;
+ul li{
+  margin-inline: 28px;
+  margin-top: 6px;
 }
-ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 14px;
-}
-ul button {
+ul button{
+  width: 100px;
+  height: 33px;
   background-color: rgb(73,226,73);
   color: white;
-  font-size: 14px;
+  font-size: 18px;
   border-radius: 11px;
   border: none;
-  padding: 5px 10px;
 }
-
-/* Music Cards */
-.container {
-  padding-top: 80px; /* To avoid overlap with navbar */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.card {
-  margin: 10px;
-  width: 180px;  /* Adjusted width for compact size */
-}
-.items {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: black;
+.container .text{
+  text-align: center;
   color: white;
-  padding: 8px;
-  border-radius: 6px;
-  margin: 5px;
-  transition: all 0.3s;
-  width: 100%;
+  padding: 12px;
 }
-.items:hover {
+.items{
+  width: 450px;
+  height: 40px;
+  padding: 12px;
+  color: white;
+  background-color: black;
+  display: flex;
+  justify-content:space-between;
+  margin-top: 10px;
+  border-radius: 6px;
+  margin-left: 32%;
+}
+.items:hover{
   background-color: rgb(112, 112, 112);
   cursor: pointer;
 }
-.items img {
-  width: 60px;  /* Smaller image */
-  height: 60px;  /* Keep the aspect ratio consistent */
+.card.items img{
+  width: 11px;
   border-radius: 5px;
-  margin-bottom: 8px;
 }
-.items p {
-  font-size: 14px;  /* Smaller text */
-  margin-bottom: 6px;
+.items p{
+  margin-top: 11px;
 }
-.items i {
-  font-size: 18px;  /* Smaller icon */
+.items span{
+  margin-top: 11px;
 }
-
-/* SeekBar and Play Controls */
-.seekBar {
+.items span i{
+  font-size: 22px;
+}
+.seekBar{
   background-color: black;
   color: white;
-  padding: 10px;
-  text-align: center;
-}
-.seekBar input {
-  width: 80%;
   margin-top: 10px;
+  padding: 12px;
 }
-.content {
+.seekBar input{
+  width: 450px;
+  text-align: center;
+  margin-left: 33%;
+  margin-top: 2px;
+}
+.content{
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 10px;
 }
-.content p {
-  font-size: 14px;  /* Smaller text */
-  margin-inline: 20px;
+.content p{
+  margin-inline: 22px;
+  margin-top: 5px;
+  font-size: 18px;
 }
-.content i {
-  font-size: 28px;  /* Smaller play button */
-  cursor: pointer;
+.content i{
+  font-size: 36px;
 }
-.content img {
-  width: 25px;
-  height: 25px;
+.content img{
+  width: 5%;
+  height: 7%;
   opacity: 0;
   transition: 1s ease;
-}
-
-/* Music Visualizer */
-canvas#visualizer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
 }
