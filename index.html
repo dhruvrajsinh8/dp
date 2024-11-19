@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>q
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Colon</title>
+    <title>Music Clone</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./Images/Spotify_favicon.jpg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
@@ -31,6 +31,7 @@
             <li><button class="sign-in-btn">Sign In</button></li>
         </ul>
     </nav>
+    
 
     <!-- Music Cards -->
     <div class="container">
@@ -88,9 +89,20 @@
             <i id="masterBtn" class="fa-solid fa-circle-play"></i>
         </div>
     </div>
+    <div id="audioPlayer">
+        <button id="playPauseBtn">Play</button>
+        <span id="currentTime">0:00</span> / <span id="duration">4:00</span>
+      </div>
+      <audio id="audio" src="your-audio-file.mp3"></audio>
+      
 
     <!-- Music Visualizer -->
     <canvas id="visualizer"></canvas>
+    
+        <div id="background-animation"></div>
+        <!-- Rest of your content -->
+    
+    
 
     <!-- Script -->
     <script src="script.js"></script>
